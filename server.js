@@ -22,7 +22,7 @@ app.post('/register', function (req, res) {
     if (req.body.os && req.body.script && req.body.name) {
         let script = scripts[req.body.os.toLowerCase()][req.body.script.toLowerCase()]
 
-        if (!script) req.sendStatus(404) // Script not found
+        if (!script) res.sendStatus(404) // Script not found
 
         listeners[req.body.name] = {
             script: script,
