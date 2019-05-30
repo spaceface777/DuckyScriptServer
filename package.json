@@ -1,0 +1,25 @@
+{
+  "name": "duckyscripts",
+  "version": "1.0.0",
+  "description": "A server to send the user the corresponding ducky script",
+  "main": "server.js",
+  "scripts": {
+    "postinstall": "git clone https://github.com/spaceface777/DuckyScripts",
+    "prestart": "cd DuckyScripts && git pull",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spaceface777/DuckyScripts.git"
+  },
+  "author": "spaceface777",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spaceface777/DuckyScripts/issues"
+  },
+  "homepage": "https://github.com/spaceface777/DuckyScripts#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
