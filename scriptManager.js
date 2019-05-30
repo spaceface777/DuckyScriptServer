@@ -35,11 +35,9 @@ function getSubDirs(dir) {
 function readScripts() {
     let OSs = getSubDirs('DuckyScripts/')
     OSs.forEach(OS => {
+        scripts[getLastChild(OS)] = {}
         let subdirs = getSubDirs(OS)
         subdirs.forEach(res => {
-            if (!scripts[getLastChild(OS)]) {
-                scripts[getLastChild(OS)] = {}
-            }
             scripts[getLastChild(OS)][getLastChild(res)] = getMainScript(res)
         })
     })
