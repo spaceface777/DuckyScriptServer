@@ -5,6 +5,7 @@ const scripts = require('./scriptManager')
 const app = express()
 app.use(bodyParser.json())
 
+const PORT = process.env.PORT || 8080
 const TOKEN = process.env.TOKEN
 
 const listeners = {}
@@ -83,6 +84,6 @@ app.post('/deleteListener', function (req, res) {
 })
 
 
-app.listen(8080, function () {
-    console.log('Started!')
+app.listen(PORT, function () {
+    console.log('Started on port ' + PORT)
 })
